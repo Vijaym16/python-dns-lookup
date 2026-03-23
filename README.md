@@ -1,28 +1,74 @@
-# Python DNS Lookup Script (Basic)
+# DNS Lookup Script (Python)
 
-## Description
-A simple Python script that performs DNS lookups. Enter a domain name (e.g., `example.com`) and the script returns its IP address.  
+## 📌 Description
 
-This project is ideal for beginners learning Python networking and exception handling.
-
----
-
-## Features
-- Resolve a domain name to its IP address.
-- Handle invalid domains gracefully.
-- No external libraries required (uses Python’s built-in `socket`).
+This is a simple Python script that performs DNS lookups for a given domain.
+It retrieves different types of DNS records like IP addresses, mail servers, and more.
 
 ---
 
-## Installation
-1. Make sure Python 3 is installed on your system.
-2. Clone or download this repository.
-3. Navigate to the project folder in your terminal.
+## 🚀 Features
+
+* Get multiple DNS records:
+
+  * A (IPv4)
+  * AAAA (IPv6)
+  * CNAME
+  * MX (Mail servers)
+  * NS (Name servers)
+  * TXT
+* Handles errors for invalid or missing domains
+* Easy to use
 
 ---
 
-## Usage
-Run the script:
+## 🛠️ Requirements
 
-```bash
+* Python 3
+* dnspython library
+
+Install dependency:
+
+```id="p7e1m2"
+pip install dnspython
+```
+
+---
+
+## ▶️ How to Run
+
+```id="m2x8l1"
 python dns_lookup.py
+```
+
+Enter a domain name when asked:
+
+```id="k9d2q0"
+example.com
+```
+
+---
+
+## 📊 Example Output
+
+```id="w1v7c3"
+A records:
+ - 93.184.216.34
+
+MX records:
+ - mail.example.com (Priority: 10)
+```
+
+---
+
+## 📄 Notes
+
+This project is good for beginners learning:
+
+* Understanding DNS record types
+* Python networking-(Working with external Python libraries)
+* Error handling
+
+📄 License
+
+This project is open-source and free to use.
